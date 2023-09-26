@@ -31,7 +31,8 @@ UML:
 Aplicatii distribuite: 
 - Lucrul cu resurse de retea (protocoalele TCP\IP si UDP)
 - HTTP si REST API 
-- Sisteme de mesagerie (JMS, ActiveMQ)
+- Sisteme de mesagerie (JMS, ActiveMQ, MQTT)
+- 
 
 UML:
 - State machine diagrams
@@ -45,4 +46,16 @@ Aplicatii complexe:
 UML:
 - Component diagrams
 
+## Tools & Utilities
+
+Java SDK 11 LTS or newer
+IntelliJ and NetBeans
+
+MySQL Database Server
+MySQL Workbench 
+
+FreeRTOS Windows Port
+Visual Studio Community 
+
+Git client
 
