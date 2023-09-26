@@ -1,1 +1,6 @@
-# curs-ssatr-ia-mas-2023
+# SSATR IA Master 2023
+
+## Introducere
+
+## Structura 
+
