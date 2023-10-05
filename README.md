@@ -18,7 +18,7 @@ UML:
 ## Laborator 2 (4h)
 
 Programarea concurenta:
-- Fire de executie
+- Executie multi-thread (procese, fire de executie native, fire de executie virtuale)
 - Mecanisme de sincronizare
 - Baze de date (JDBC) 
 
@@ -32,7 +32,6 @@ Aplicatii distribuite:
 - Lucrul cu resurse de retea (protocoalele TCP\IP si UDP)
 - HTTP si REST API 
 - Sisteme de mesagerie (JMS, ActiveMQ, MQTT)
-- 
 
 UML:
 - State machine diagrams
@@ -50,12 +49,17 @@ UML:
 
 Java SDK 11 LTS or newer
 IntelliJ and NetBeans
+Maven
 
 MySQL Database Server
 MySQL Workbench 
 
-FreeRTOS Windows Port
-Visual Studio Community 
+MQTT Broker 
+MQTT Client
 
+Apache ActiveMQ
+
+Star UML
 Git client
+
 
