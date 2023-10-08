@@ -1,5 +1,12 @@
 # Implement the following exercises
 
+## Objectives 
+
+Main objectives of this lab are:
+- Understand how to create aplications composed of multiple clasesse using composition, aggregation and inheritance
+- Understand how to read and interpret an UML class diagram
+- Create a complex application which integrate external library for generating qr codes
+
 In this lab you will create small Java applications by using as reference an UML class diagram. Please consider following general notes before start implementing:
 - toString() method when required will return a string like *ClassName{attributeName1=attributeValue1,...,attributeNamen=attributeValuen}*.
 - add any constructors, getter, setters or other methods you consider are required even if are not explicitly presented in the diagrams.
@@ -32,6 +39,12 @@ E.g. A smartwatch is charged to 20% in 10 min.
 Given the UML class diagram above, implement the corresponding Java program.
 
 ## Exercise 4
+
+Load project exemple-curs-3-app and studty structue the eventticketingsystem application. 
+1. Create a folder on your disk and update TicketsManager line to point to your directory: `ImageIO.write(bi, "png", new File("C:\\Tickets\\ticket_"+ticketOwner.getName()+".png"));`
+2. Execute main method from Main class and generate 3 tickets
+3. Update main method and test checking method
+
 ![Exercise 4 image](docs/tickets_app2.jpg)
 
 Above picture presentes a high level concept of an event ticketing system. 
@@ -41,6 +54,4 @@ Above picture presentes a high level concept of an event ticketing system.
 
 **NOTE 1** Bofore start this exercise run and test eventticketsystem application which exemplify the process of encoding and decoding a qr code. 
 
-**NOTE 2** Bofore start this exercise run and test eventticketsystem application which exemplify the process of encoding and decoding a qr code. 
-
-**NOTE 3** Please note that pom.xml file of this project must be updated to add required dependencies to encode and decode qrcodes. Check pom.xml file from example-curs-3-apps project (you will need to add com.google.zxing related dependencies). 
+**NOTE 2** Please note that pom.xml file of this project must be updated to add required dependencies to encode and decode qrcodes. Check pom.xml file from example-curs-3-apps project (you will need to add com.google.zxing related dependencies). 
