@@ -37,8 +37,10 @@ Given the UML class diagram above, implement the corresponding Java program.
 Above picture presentes a high level concept of an event ticketing system. 
 1. Create a class diagram to model minimal functionalities of event ticketing system. 
 2. Create the minimal application based on the class diagram you have created.
+3. Use eventticketsystem example from example-curs-3-apps in order to implement the mechanism for generating qr codes for tickets and validate and chekin tickets.
 
-**NOTE 1** In your implementation, use at least two of the following type definitions: enum, interface, abstract class.
+**NOTE 1** Bofore start this exercise run and test eventticketsystem application which exemplify the process of encoding and decoding a qr code. 
 
-**NOTE 2** No real impementaion is needed (no need to generate qr codes, integrate payment service, etc). The class diagram you create and the application will only simulate various features of the application by simply displaying messages. 
-The focus will be in identifying main features of each of the components. Model each component as a class. Identify the relation (collaboration) between classes and try to model this interactions in the application.
+**NOTE 2** Bofore start this exercise run and test eventticketsystem application which exemplify the process of encoding and decoding a qr code. 
+
+**NOTE 3** Please note that pom.xml file of this project must be updated to add required dependencies to encode and decode qrcodes. Check pom.xml file from example-curs-3-apps project (you will need to add com.google.zxing related dependencies). 
