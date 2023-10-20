@@ -10,7 +10,7 @@ public class Main {
         //Create ticket
 
           TicketsManager tm = new TicketsManager();
-          PurchasedTicket pt = tm.createTicket("SSATR", "a@.a", "123", "Event1", LocalDateTime.now(), "REG", 100, "22-12-10");
+          PurchasedTicket pt = tm.createTicket("LABORATOR 1 ", "L1@.L1.com", "123", "Event1", LocalDateTime.now(), "REG", 100, "22-12-10");
           tm.generateElectronicTicket(pt);
 //        PurchasedTicket ticket1 = tm.createTicket("GeorgeSM GeorgeSM","a@b.c","1234567890","Concert", LocalDateTime.now(),"VIP",100,"2020-12-12");
 //

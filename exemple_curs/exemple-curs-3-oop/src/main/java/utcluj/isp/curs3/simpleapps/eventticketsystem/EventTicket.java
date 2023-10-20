@@ -23,4 +23,6 @@ public class EventTicket {
     public String toString() {
         return "Event: " + eventName + " | Date: " + eventDate + " | Ticket Type: " + ticketType + " | Price: $" + ticketPrice;
     }
+    
+    
 }
