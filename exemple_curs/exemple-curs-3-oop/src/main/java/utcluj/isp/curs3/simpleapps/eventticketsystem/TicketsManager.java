@@ -32,7 +32,7 @@ public class TicketsManager {
         try {
             BitMatrix bitMatrix = barcodeWriter.encode(ticketOwner.toString(), BarcodeFormat.QR_CODE, 200, 200);
             BufferedImage bi =  MatrixToImageWriter.toBufferedImage(bitMatrix);
-            ImageIO.write(bi, "png", new File("C:\\Tickets\\ticket_"+ticketOwner.getName()+".png"));
+            ImageIO.write(bi, "png", new File("C:\\Tickets2\\ticket_"+ticketOwner.getName()+".png"));
         } catch (WriterException | IOException e) {
             throw new RuntimeException(e);
         }

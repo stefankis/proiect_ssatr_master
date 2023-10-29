@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="utcluj.isp.curs.ExempleCurs2OopTest" time="0.039" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="utcluj.isp.curs.ExempleCurs2OopTest" time="0.028" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\_ exemple master ssatr IA 2023\exemple-curs-3-oop\target\test-classes;C:\_ exemple master ssatr IA 2023\exemple-curs-3-oop\target\classes;C:\Users\mihai\.m2\repository\com\google\zxing\core\3.5.1\core-3.5.1.jar;C:\Users\mihai\.m2\repository\com\google\zxing\javase\3.5.1\javase-3.5.1.jar;C:\Users\mihai\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\mihai\.m2\repository\com\github\jai-imageio\jai-imageio-core\1.4.0\jai-imageio-core-1.4.0.jar;C:\Users\mihai\.m2\repository\org\projectlombok\lombok\1.18.24\lombok-1.18.24.jar;C:\Users\mihai\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.0\junit-jupiter-api-5.6.0.jar;C:\Users\mihai\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\mihai\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\mihai\.m2\repository\org\junit\platform\junit-platform-commons\1.6.0\junit-platform-commons-1.6.0.jar;C:\Users\mihai\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.6.0\junit-jupiter-params-5.6.0.jar;C:\Users\mihai\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.0\junit-jupiter-engine-5.6.0.jar;C:\Users\mihai\.m2\repository\org\junit\platform\junit-platform-engine\1.6.0\junit-platform-engine-1.6.0.jar;"/>
+    <property name="java.class.path" value="C:\_ exemple master ssatr IA 2023\curs-ssatr-ia-mas-2023\exemple_curs\exemple-curs-3-oop\target\test-classes;C:\_ exemple master ssatr IA 2023\curs-ssatr-ia-mas-2023\exemple_curs\exemple-curs-3-oop\target\classes;C:\Users\mihai\.m2\repository\com\google\zxing\core\3.5.1\core-3.5.1.jar;C:\Users\mihai\.m2\repository\com\google\zxing\javase\3.5.1\javase-3.5.1.jar;C:\Users\mihai\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\mihai\.m2\repository\com\github\jai-imageio\jai-imageio-core\1.4.0\jai-imageio-core-1.4.0.jar;C:\Users\mihai\.m2\repository\org\projectlombok\lombok\1.18.24\lombok-1.18.24.jar;C:\Users\mihai\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.0\junit-jupiter-api-5.6.0.jar;C:\Users\mihai\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\mihai\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\mihai\.m2\repository\org\junit\platform\junit-platform-commons\1.6.0\junit-platform-commons-1.6.0.jar;C:\Users\mihai\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.6.0\junit-jupiter-params-5.6.0.jar;C:\Users\mihai\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.0\junit-jupiter-engine-5.6.0.jar;C:\Users\mihai\.m2\repository\org\junit\platform\junit-platform-engine\1.6.0\junit-platform-engine-1.6.0.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,9 +15,9 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17.0.4.1\bin"/>
-    <property name="sun.java.command" value="C:\Users\mihai\AppData\Local\Temp\surefire14682071725624388467\surefirebooter4225421797414882813.jar C:\Users\mihai\AppData\Local\Temp\surefire14682071725624388467 2023-10-05T12-53-04_260-jvmRun1 surefire10777561157011348033tmp surefire_02822064690859770071tmp"/>
+    <property name="sun.java.command" value="C:\Users\mihai\AppData\Local\Temp\surefire4352914458322065653\surefirebooter13529099233166334368.jar C:\Users\mihai\AppData\Local\Temp\surefire4352914458322065653 2023-10-23T19-24-41_806-jvmRun1 surefire9611579167578760069tmp surefire_017919825870090058885tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\_ exemple master ssatr IA 2023\exemple-curs-3-oop\target\test-classes;C:\_ exemple master ssatr IA 2023\exemple-curs-3-oop\target\classes;C:\Users\mihai\.m2\repository\com\google\zxing\core\3.5.1\core-3.5.1.jar;C:\Users\mihai\.m2\repository\com\google\zxing\javase\3.5.1\javase-3.5.1.jar;C:\Users\mihai\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\mihai\.m2\repository\com\github\jai-imageio\jai-imageio-core\1.4.0\jai-imageio-core-1.4.0.jar;C:\Users\mihai\.m2\repository\org\projectlombok\lombok\1.18.24\lombok-1.18.24.jar;C:\Users\mihai\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.0\junit-jupiter-api-5.6.0.jar;C:\Users\mihai\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\mihai\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\mihai\.m2\repository\org\junit\platform\junit-platform-commons\1.6.0\junit-platform-commons-1.6.0.jar;C:\Users\mihai\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.6.0\junit-jupiter-params-5.6.0.jar;C:\Users\mihai\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.0\junit-jupiter-engine-5.6.0.jar;C:\Users\mihai\.m2\repository\org\junit\platform\junit-platform-engine\1.6.0\junit-platform-engine-1.6.0.jar;"/>
+    <property name="surefire.test.class.path" value="C:\_ exemple master ssatr IA 2023\curs-ssatr-ia-mas-2023\exemple_curs\exemple-curs-3-oop\target\test-classes;C:\_ exemple master ssatr IA 2023\curs-ssatr-ia-mas-2023\exemple_curs\exemple-curs-3-oop\target\classes;C:\Users\mihai\.m2\repository\com\google\zxing\core\3.5.1\core-3.5.1.jar;C:\Users\mihai\.m2\repository\com\google\zxing\javase\3.5.1\javase-3.5.1.jar;C:\Users\mihai\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\mihai\.m2\repository\com\github\jai-imageio\jai-imageio-core\1.4.0\jai-imageio-core-1.4.0.jar;C:\Users\mihai\.m2\repository\org\projectlombok\lombok\1.18.24\lombok-1.18.24.jar;C:\Users\mihai\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.0\junit-jupiter-api-5.6.0.jar;C:\Users\mihai\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\mihai\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\mihai\.m2\repository\org\junit\platform\junit-platform-commons\1.6.0\junit-platform-commons-1.6.0.jar;C:\Users\mihai\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.6.0\junit-jupiter-params-5.6.0.jar;C:\Users\mihai\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.0\junit-jupiter-engine-5.6.0.jar;C:\Users\mihai\.m2\repository\org\junit\platform\junit-platform-engine\1.6.0\junit-platform-engine-1.6.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\mihai"/>
     <property name="user.language" value="en"/>
@@ -25,12 +25,12 @@
     <property name="java.version.date" value="2022-08-18"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-17.0.4.1"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="C:\_ exemple master ssatr IA 2023\exemple-curs-3-oop"/>
+    <property name="basedir" value="C:\_ exemple master ssatr IA 2023\curs-ssatr-ia-mas-2023\exemple_curs\exemple-curs-3-oop"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\mihai\AppData\Local\Temp\surefire14682071725624388467\surefirebooter4225421797414882813.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\mihai\AppData\Local\Temp\surefire4352914458322065653\surefirebooter13529099233166334368.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.4.1+1-LTS-2"/>
@@ -45,7 +45,7 @@
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\mihai\AppData\Local\Temp\"/>
     <property name="java.version" value="17.0.4.1"/>
-    <property name="user.dir" value="C:\_ exemple master ssatr IA 2023\exemple-curs-3-oop"/>
+    <property name="user.dir" value="C:\_ exemple master ssatr IA 2023\curs-ssatr-ia-mas-2023\exemple_curs\exemple-curs-3-oop"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
@@ -57,5 +57,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="hello" classname="utcluj.isp.curs.ExempleCurs2OopTest" time="0.026"/>
+  <testcase name="hello" classname="utcluj.isp.curs.ExempleCurs2OopTest" time="0.025"/>
 </testsuite>
