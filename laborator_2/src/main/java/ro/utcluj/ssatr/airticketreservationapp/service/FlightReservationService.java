@@ -8,10 +8,12 @@ import java.sql.SQLException;
 import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import ro.utcluj.ssatr.airticketreservationapp.model.User;
 
 public class FlightReservationService {
     private DBAccess connection;
     private FlightInformationTableModel flightInformationTableModel;
+    private UsersTableModel userTableModel;
     private List<FlightInformation> list = new ArrayList<>();
 
     public FlightReservationService() {
@@ -26,11 +28,20 @@ public class FlightReservationService {
         }
 
         flightInformationTableModel  = new FlightInformationTableModel(connection);
-
+        userTableModel = new UsersTableModel(connection);
     }
 
     public FlightInformationTableModel getFlightInformationTableModel() {
         return flightInformationTableModel;
+    }
+
+    public UsersTableModel getUserTableModel() {
+        return userTableModel;
+    }
+    
+    public void addUser(User u){
+       this.getUserTableModel().updateTable();
+       connection.insertUser(u);
     }
 
     public void addNewFlight(String flightNumber, int noOfSeats, String departureDate){

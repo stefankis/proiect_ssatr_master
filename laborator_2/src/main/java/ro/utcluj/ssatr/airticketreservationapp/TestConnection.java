@@ -15,7 +15,7 @@ public class TestConnection {
                 
                 System.out.println("Connecting...");
                 //conectare la baza de date            
-                Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/flights","root","root");
+                Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/flights2","root","root");
                 System.out.println("Connected!");    
                 //inchide cnexiune la baza de date
                 conn.close();

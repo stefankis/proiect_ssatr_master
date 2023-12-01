@@ -10,6 +10,9 @@ import ro.utcluj.ssatr.airticketreservationapp.model.FlightReservation;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import ro.utcluj.ssatr.airticketreservationapp.model.User;
 
 /**
  *
@@ -67,6 +70,19 @@ public class DBAccess {
             ResultSet rs = s.executeQuery("SELECT * FROM FLIGHTS");
             while (rs.next()) {
                 list.add(new FlightInformation(rs.getString("FLIGHTNUMBER"), rs.getInt("NOOFSEATS"), rs.getString("DEPARTUREDATE")));
+            }
+            return list;
+        }
+
+    }
+    
+     public List<User> findAllUsers() throws SQLException {
+        try ( Statement s = connection.createStatement()) {
+            ArrayList<User> list = new ArrayList<>();
+
+            ResultSet rs = s.executeQuery("SELECT * FROM USERS");
+            while (rs.next()) {
+                list.add(new User(rs.getString("IDUSERS"), rs.getString("NAME")));
             }
             return list;
         }
@@ -136,6 +152,14 @@ public class DBAccess {
         }
 
     }
+    
+//    public void insertUser(String userId, String userName){
+//        try ( Statement s = connection.createStatement()) {
+//            s.executeUpdate("INSERT INTO USERS(IDUSERS, NAME) VALUES('" + userId + "','" + userName + "')");
+//        } catch (SQLException ex) {
+//            Logger.getLogger(DBAccess.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//    }
 
     public void cancelReservation(int reservationId) {
 
@@ -147,10 +171,22 @@ public class DBAccess {
         }
     }
 
+    public void insertUser(User u) {
+        try ( Statement s = connection.createStatement()) {
+            s.executeUpdate("INSERT INTO USERS(IDUSERS, NAME) VALUES('" + u.getUsedId() + "','" + u.getName() + "')");
+        } catch (SQLException ex) {
+            Logger.getLogger(DBAccess.class.getName()).log(Level.SEVERE, null, ex);
+        } 
+    }
+    
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
         DBAccess db = new DBAccess();
         System.out.println("Connection ok...");
-        db.insertFlight(new FlightInformation("SM0101", 140, "19-01-2023"));
+        db.insertUser(new User("PrimulUser","Nume User"));
+        //db.insertFlight(new FlightInformation("SM0101", 140, "19-01-2023"));
+        //db.insertUser("u1", "Demo User");
         //db.updateSeats("CJB01", 199);
     }
+
+
 }
