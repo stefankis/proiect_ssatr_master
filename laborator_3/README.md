@@ -20,7 +20,7 @@ Sa se realize diagrama UML de clase a aplicatiei.
 
 ## Exercitiul 3
 
-Sa se adauge un sensor de umiditate si sa se modifice logica algoritmului de control in asa fel incat comanda ON\OFF a actuatorului sa initieze prin indeplinirea simultana a doua conditii: T>x sau H>y => commanda ON si T<y sau H<X => comanda OFF. 
+Sa se adauge un sensor de umiditate si sa se modifice logica algoritmului de control in asa fel incat comanda ON\OFF a actuatorului sa initieze prin indeplinirea simultana a doua conditii: T>x sau H>y => commanda ON si T<x sau H<y => comanda OFF. 
 
 ## Exercitiul 4 
 
