@@ -4,17 +4,35 @@
  */
 package com.mycompany.exemple.curs.iot.mqtt;
 
+import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
+import org.eclipse.paho.client.mqttv3.MqttCallback;
+import org.eclipse.paho.client.mqttv3.MqttClient;
+import org.eclipse.paho.client.mqttv3.MqttException;
+import org.eclipse.paho.client.mqttv3.MqttMessage;
+import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
+
 /**
  *
  * @author mihai
  */
-public class ActuatorUI extends javax.swing.JFrame {
+public class ActuatorUI extends javax.swing.JFrame implements MqttCallback {
+    
+    private MqttClient client;
 
     /**
      * Creates new form ActuatorUI
      */
     public ActuatorUI() {
         initComponents();
+    }
+    
+    public ActuatorUI(String broker, String topic) throws MqttException{
+        initComponents();
+        this.client = new MqttClient(broker, MqttClient.generateClientId(), new MemoryPersistence());
+        this.client.connect();
+        this.client.setCallback(this);
+        this.client.subscribe(topic);
+        
     }
 
     /**
@@ -28,7 +46,7 @@ public class ActuatorUI extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        labelActionValue = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -36,7 +54,7 @@ public class ActuatorUI extends javax.swing.JFrame {
 
         jLabel4.setText("Action");
 
-        jButton1.setText("OFF");
+        labelActionValue.setText("N/A");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -45,9 +63,9 @@ public class ActuatorUI extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(labelActionValue, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(19, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -55,8 +73,8 @@ public class ActuatorUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jButton1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(labelActionValue))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -115,8 +133,24 @@ public class ActuatorUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel labelActionValue;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void connectionLost(Throwable thrwbl) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public void messageArrived(String string, MqttMessage mm) throws Exception {
+        String newCommand = new String(mm.getPayload());
+        this.labelActionValue.setText(newCommand);
+    }
+
+    @Override
+    public void deliveryComplete(IMqttDeliveryToken imdt) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

@@ -18,10 +18,15 @@ public class SensorUI extends javax.swing.JFrame implements Observer{
      */
     public SensorUI() {
         initComponents();
+    }
+    
+    public SensorUI(String broker, String topic){
+        initComponents();
         GenericMinMaxSensor vt = new GenericMinMaxSensor(-30,30, "C", "tcp://localhost:1883", "temperature");
         Thread t = new Thread(vt);
         t.start();
         vt.addObserver(this);
+        
     }
 
     /**
