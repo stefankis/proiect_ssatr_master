@@ -24,3 +24,6 @@ hs_err_pid*
 replay_pid*
 /laborator_1/target/
 /exemple_curs/exemple-curs-parking-net/target/
+/exemple_curs/elevator-sample/target/
+/exemple_curs/taxi-driver/target/
+/exemple_curs/exemple-curs-5-taxi-driver/target/
