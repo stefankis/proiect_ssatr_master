@@ -13,8 +13,11 @@ import org.eclipse.paho.client.mqttv3.MqttException;
  */
 public class RunAll {
     public static void main(String[] args) throws MqttException {
-        SensorUI s = new SensorUI("tcp://localhost:1883","actuator");
+        SensorUI s = new SensorUI( "tcp://localhost:1883","temperature",-30,30,"C");
         s.setVisible(true);
+        
+        SensorUI s2 = new SensorUI( "tcp://localhost:1883","humidity",-30,30,"%");
+        s2.setVisible(true);
         
         ArrayList<String> list = new ArrayList<>();
         list.add("temperature");
@@ -22,5 +25,6 @@ public class RunAll {
         
         ActuatorUI a = new ActuatorUI("tcp://localhost:1883","actuator");
         a.setVisible(true);
+        
     }
 }

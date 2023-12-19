@@ -19,6 +19,9 @@ import java.util.StringTokenizer;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 
 public class GenericController implements MqttCallback {
+    private int XT = 10;
+    private int YH = 50;
+    
     private ArrayList<String> topics;
     private MqttClient client;
     private final String actuatorTopic = "actuator";
@@ -61,25 +64,42 @@ public class GenericController implements MqttCallback {
 
     // Implementation of the control method
     protected void controlMethod(String topic, String message) {
-        try {
-            System.out.println("CALL");
+        try{
             StringTokenizer st = new StringTokenizer(message, " ");
             double v = Double.parseDouble(st.nextToken());
-            
-            String command = (v>0)?"ON":"OFF";
-            MqttMessage commandMessage = new MqttMessage(command.getBytes());
-            client.publish(actuatorTopic, commandMessage);
-        } catch (NumberFormatException e) {
-            System.err.println("Received message is not a valid double: " + message);
-        } catch (MqttException e) {
-            e.printStackTrace();
+
+            if(topic.equals("temperature")){
+                String command = (v>XT)?"T_ON":"T_OFF";
+                MqttMessage commandMessage = new MqttMessage(command.getBytes());
+                client.publish(actuatorTopic, commandMessage);
+            }else{
+                System.out.println("Unknown topic. Ignore message.");
+            }
         }
+        catch(Exception e){
+                e.printStackTrace();
+                }
     }
+
+//        try {
+//            System.out.println("CALL");
+//            StringTokenizer st = new StringTokenizer(message, " ");
+//            double v = Double.parseDouble(st.nextToken());
+//            
+//            String command = (v>0)?"ON":"OFF";
+//            MqttMessage commandMessage = new MqttMessage(command.getBytes());
+//            client.publish(actuatorTopic, commandMessage);
+//        } catch (NumberFormatException e) {
+//            System.err.println("Received message is not a valid double: " + message);
+//        } catch (MqttException e) {
+//            e.printStackTrace();
+//        }
+    
     
     public static void main(String[] args) {
-        ArrayList<String> list = new ArrayList<>();
-        list.add("temperature");
-        GenericController gc = new GenericController("tcp://localhost:1883",list);
+//        ArrayList<String> list = new ArrayList<>();
+//        list.add("temperature");
+//        GenericController gc = new GenericController("tcp://localhost:1883",list);
     }
 
     

@@ -70,5 +70,7 @@ public class GenericMinMaxSensor extends Observable implements Runnable {
         GenericMinMaxSensor vt = new GenericMinMaxSensor(-30,30, "C", "tcp://localhost:1883", "temperature");
         Thread t = new Thread(vt);
         t.start();
+        
+        
     }
 }
