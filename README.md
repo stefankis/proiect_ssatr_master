@@ -1,65 +1,22 @@
 # SSATR IA Master 2023
 
-## Introducere
+## Laboratoare SSATR
 
 ## Laborator 1 (4h)
 
-Aspecte de programare Java:
-- OOP
-- Colectii
-- Interfete grafice de tip Swing
-- Sabloane de proiectare
-
-UML:
-- Introducere
-- Use Case Diagrams
-- Class Diagrams
+- Apecte de programare OOP. 
+- Generarea de QR coduri utilizand libraria com.google.zxing (Link aplicatie https://github.com/automatica-cluj/curs-ssatr-ia-mas-2023/tree/main/exemple_curs/exemple-curs-1-oop2/src/main/java/utcluj/isp/curs3/simpleapps/eventticketsystem) 
 
 ## Laborator 2 (4h)
 
-Programarea concurenta:
-- Executie multi-thread (procese, fire de executie native, fire de executie virtuale)
-- Mecanisme de sincronizare
-- Baze de date (JDBC) 
-
-UML:
-- Sequence diagrams
-- Communication diagrams
+- Baze de date si tehnologia JDBC. 
+- Comunicarea utilizand TCP\IP
 
 ## Laborator 3 (4h)
 
-Aplicatii distribuite: 
-- Lucrul cu resurse de retea (protocoalele TCP\IP si UDP)
-- HTTP si REST API 
-- Sisteme de mesagerie (JMS, ActiveMQ, MQTT)
-
-UML:
-- State machine diagrams
-- Activity diagrams
+- Protocolul MQTT si brokerul de mesaje Mosquitto
 
 ## Laborator 4 (2h)
 
-Aplicatii complexe:
-- Frameworkul Java Spring 
-
-UML:
-- Component diagrams
-
-## Tools & Utilities
-
-Java SDK 11 LTS or newer
-IntelliJ and NetBeans
-Maven
-
-MySQL Database Server
-MySQL Workbench 
-
-MQTT Broker 
-MQTT Client
-
-Apache ActiveMQ
-
-Star UML
-Git client
-
-
+- Protocolul AMQP si brokerul de mesaje RabbitMQ 
+- 
