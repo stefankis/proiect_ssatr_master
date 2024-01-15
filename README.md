@@ -18,5 +18,4 @@
 
 ## Laborator 4 (2h)
 
-- Protocolul AMQP si brokerul de mesaje RabbitMQ 
-- 
+- Protocolul AMQP si brokerul de mesaje RabbitMQ
