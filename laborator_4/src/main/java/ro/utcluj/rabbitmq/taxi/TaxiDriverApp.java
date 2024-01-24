@@ -28,6 +28,8 @@ public class TaxiDriverApp extends javax.swing.JFrame implements DeliverCallback
     private TaxiDriverApp.ListOrderesModel listModel = new ListOrderesModel();
     private String driverId;
     private String currentOrder = null;
+    private long orderTime;
+    private long finalTime;
     /**
      * Creates new form TaxiDriverApp
      */
@@ -190,6 +192,8 @@ public class TaxiDriverApp extends javax.swing.JFrame implements DeliverCallback
             this.tfCurrentOrder.setText(this.listOrders.getSelectedValue());
             listOrders.updateUI();
             this.bTake.setEnabled(false);
+            orderTime = System.currentTimeMillis();
+            System.out.println("confirmare" + orderTime);
         } catch (Exception ex) {
             Logger.getLogger(TaxiDriverApp.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -201,6 +205,8 @@ public class TaxiDriverApp extends javax.swing.JFrame implements DeliverCallback
             sendOrderConfirmationToClient(currentOrder, driverId);
             currentOrder = null;
             this.tfCurrentOrder.setText("");
+            finalTime = System.currentTimeMillis();
+            System.out.println("Cost: " + (finalTime-orderTime)/1000*2.5);
         } catch (Exception ex) {
             Logger.getLogger(TaxiDriverApp.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -287,17 +293,14 @@ public class TaxiDriverApp extends javax.swing.JFrame implements DeliverCallback
         public int getSize() {
             return activeOrders.size();
         }
-
         @Override
         public Object getElementAt(int index) {
             return activeOrders.get(index);
         }
-
         @Override
         public void addListDataListener(ListDataListener l) {
             //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
         }
-
         @Override
         public void removeListDataListener(ListDataListener l) {
             //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
